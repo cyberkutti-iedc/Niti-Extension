@@ -1,9 +1,9 @@
 {
   "name": "niti",
-  "displayName": "Niti",
-  "description": "A VS Code extension for embedded Rust development.",
-  "version": "0.0.1",
-  "publisher": "SREERAJ V RAJESH",
+  "displayName": "NITI",
+  "description": "Embedded Rust extension for VS Code, enabling development, debugging, and deployment of NITI Dev Board applications using NITI-IDF.",
+  "version": "1.0.0",
+  "publisher": "SREERAJVRAJESH",
   "repository": {
     "type": "git",
     "url": "https://github.com/cyberkutti-iedc/Niti-Extension"
@@ -25,22 +25,26 @@
     "commands": [
       {
         "command": "extension.buildProject",
-        "title": "NITI :Build Project"
+        "title": "NITI : Build Project"
       },
       {
         "command": "extension.flashFirmware",
-        "title": "NITI :Flash Firmware"
+        "title": "NITI : Flash Firmware"
       },
       {
         "command": "extension.selectComPort",
-        "title": "NITI :Select COM Port"
+        "title": "NITI : Select COM Port"
       },
       {
         "command": "extension.showAbout",
-        "title": "NITI :About us"
+        "title": "NITI : About Us"
+      },
+      {
+        "command": "extension.createProject",
+        "title": "NITI : Create Project"
       }
     ],
-   "configuration": {
+    "configuration": {
       "type": "object",
       "properties": {
         "niti.rustToolchainPath": {
@@ -61,7 +65,6 @@
         }
       }
     }
-  
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

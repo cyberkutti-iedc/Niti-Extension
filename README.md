@@ -1,94 +1,120 @@
-# Niti: Embedded Rust Framework for VS Code
+# 🌟 **Niti: Embedded Rust Framework for VS Code** 🚀  
 
-**Niti** is an extension for Visual Studio Code that provides a comprehensive framework for developing firmware for AVR-based microcontrollers using the Rust programming language. It simplifies the process of building, flashing, and managing embedded Rust projects, especially those targeting Niti V1 boards and other AVR microcontrollers.
+**Niti** is an extension for Visual Studio Code designed to provide a comprehensive framework for developing firmware for AVR-based microcontrollers using Rust. With seamless integration for the **Niti V1 Board** and other AVR devices, it simplifies building, flashing, and managing embedded Rust projects.
 
-## Features
+![Niti Logo](https://niti-website-beta.vercel.app/assets/rust-logo-DgTKb-JD.gif)  
+
+---
+
+## 🚀 **Features**  
 
 - **Build Project**: Easily build your embedded Rust project using Cargo.
-- **Flash Firmware**: Flash the compiled firmware to your connected device.
+- **Flash Firmware**: Flash the compiled firmware to your connected device with ease.
 - **Select COM Port**: Select the appropriate COM port for flashing.
-- **About Page**: View detailed information about the Niti extension and its usage.
-- **Integrated with Niti V1 Board**: Supports the Niti V1 board and related hardware for embedded development.
+- **About Page**: Access detailed information about the Niti extension and its usage.
+- **Integrated with Niti V1 Board**: Optimized for Niti V1 Board and AVR microcontrollers.
 
-## Requirements
+---
 
-- **Rust**: This extension requires the Rust programming language. Ensure that the Rust toolchain is installed on your system.
-- **AVR Toolchain**: The extension supports AVR-based microcontrollers. Install the required AVR tools (e.g., `avr-gcc`, `avrdude`).
+## 🔧 **Requirements**
+
+Ensure you have the following tools installed for optimal performance:
+
+- **Rust**: Make sure Rust is installed. You can get it from [rustup](https://rustup.rs/).
+- **AVR Toolchain**: Install the required AVR tools, including `avr-gcc`, `avrdude`, and others. Platform-specific instructions can be found in the **Quickstart** section.
+- **Waterman (Optional)**: For easy firmware flashing within the `cargo` workflow.
   
-  Follow the instructions in the **Quickstart** section to install these dependencies based on your operating system.
+```bash
+cargo install waterman
+```
 
-## Installation
+---
+
+## 💻 **Installation**
 
 ### Prerequisites
-- Install **Rust** using [rustup](https://rustup.rs/).
-- Install the **AVR Toolchain** on your system. Refer to the **Quickstart** section for platform-specific instructions.
-- Optionally, install **Waterman** for seamless flashing of firmware using `cargo`:
-  ```bash
-  cargo install waterman
-  ```
 
-### VS Code Extension Installation
-1. **Install the Extension from the VS Code Marketplace**:
-    - Open the **Extensions** view in VS Code (Ctrl+Shift+X or Cmd+Shift+X on macOS).
-    - Search for **Niti: Embedded Rust Framework** and click **Install**.
+- **Rust**: Install Rust through [rustup](https://rustup.rs/).
+- **AVR Toolchain**: Install the AVR toolchain for your operating system.
 
-2. **Install from VSIX (For testing locally)**:
-    - Download or build the `.vsix` package.
-    - In VS Code, open the Extensions view and click the three dots in the upper right.
-    - Select **Install from VSIX** and choose the `.vsix` file.
+### Install the Extension
 
-## Setup
+1. **Install from the VS Code Marketplace**:
+   - Open VS Code and go to the **Extensions** view (Ctrl+Shift+X or Cmd+Shift+X on macOS).
+   - Search for **Niti: Embedded Rust Framework** and click **Install**.
 
-1. Clone the [Niti-core repository](https://github.com/cyberkutti-iedc/Niti-core) or create a new project using the template.
-2. Open your embedded Rust project in VS Code.
-3. Configure your `rust-toolchain.toml` file to use the nightly compiler (if not already done).
-4. Install necessary dependencies using the instructions provided for each platform.
+2. **Install from VSIX (for local testing)**:
+   - Download or build the `.vsix` package.
+   - In VS Code, go to the Extensions view and click the three dots in the upper-right corner.
+   - Select **Install from VSIX** and choose the `.vsix` file.
 
-## Commands
+---
 
-The extension provides the following commands:
+## 🌱 **Setup Guide**
 
-- **Build Project**: Builds the current Rust project using Cargo.
+1. Clone the [Niti-core repository](https://github.com/cyberkutti-iedc/Niti-core) or generate a new project using the provided template.
+2. Open your project in VS Code.
+3. Set up your `rust-toolchain.toml` file to use the nightly compiler (if not already done).
+4. Follow platform-specific instructions for installing dependencies and configuring your environment.
+
+---
+
+## 🛠️ **Commands**
+
+The Niti extension for VS Code offers several commands that can be triggered via the command palette or status bar:
+
+- **Build Project**: Builds your embedded Rust project using Cargo.
   - Command: `extension.buildProject`
-  - Trigger: Click the **Build Project** button in the status bar or use the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS).
+  - Trigger: Click the **Build Project** button in the status bar or use `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS).
   
-- **Flash Firmware**: Flash the compiled firmware to the connected Niti V1 or other AVR-based devices.
+- **Flash Firmware**: Flash the compiled firmware to the Niti V1 or other AVR-based devices.
   - Command: `extension.flashFirmware`
   - Trigger: Click the **Flash Firmware** button in the status bar or use the command palette.
-  
-- **Select COM Port**: Select the COM port for flashing the connected device.
+
+- **Select COM Port**: Choose the correct COM port for flashing.
   - Command: `extension.selectComPort`
   - Trigger: Click the **Select COM Port** button in the status bar or use the command palette.
 
-## About Niti
+---
 
-The Niti extension works with **Niti V1**, an embedded abstraction layer for AVR microcontrollers and common boards. Niti simplifies development for AVR-based devices by providing easy-to-use APIs for working with peripherals, sensors, and displays.
+## 🌟 **About Niti**
+
+The Niti extension simplifies development for AVR-based devices using Rust. It provides easy-to-use APIs for interacting with hardware peripherals like sensors and displays, making it an ideal choice for embedded development with the **Niti V1 Board**.
 
 - **Quickstart**: Follow the [Quickstart guide](https://github.com/cyberkutti-iedc/Niti-core#quickstart) for setting up your environment and building the firmware.
 - **Repository**: [Niti-core GitHub](https://github.com/cyberkutti-iedc/Niti-core)
-- **Waterman**: Tool for integrating firmware flashing with `cargo`. See [Waterman GitHub](https://github.com/cyberkutti-iedc/Waterman).
+- **Waterman**: A tool for integrating firmware flashing with `cargo`. Learn more at [Waterman GitHub](https://github.com/cyberkutti-iedc/Waterman).
 
-## Repository Structure
+---
 
-The Niti-core repository is organized into various components:
+## 🗂️ **Repository Structure**
 
-- `niti-eal`: Embedded Abstraction Layer for Niti V1.
-- `examples/`: Practical examples for common peripherals and components.
-- `mcu/`: Hardware abstraction layer (HAL) for AVR microcontrollers like ATmega328P.
-- `avr-hal-generic`: Generic HAL implementation for AVR microcontrollers.
-- `avr-specs/`: Compiler target definitions for AVR microcontrollers.
+The Niti-core repository includes the following components:
 
-## License
+- **niti-eal**: Embedded Abstraction Layer for Niti V1.
+- **examples/**: Practical examples for working with common peripherals.
+- **mcu/**: Hardware abstraction layer (HAL) for AVR microcontrollers like ATmega328P.
+- **avr-hal-generic**: Generic HAL implementation for AVR devices.
+- **avr-specs/**: Compiler target definitions for AVR microcontrollers.
+
+---
+
+## 📜 **License**
 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/cyberkutti-iedc/niti-extension/blob/main/LICENSE) file for more details.
 
+---
 
-## Contribution
+## 🤝 **Contribution**
 
-Contributions to this project are welcome! Please fork the repository and submit a pull request for any improvements or fixes. Make sure to follow the code style and provide meaningful commit messages.
+We welcome contributions! Fork the repository and submit a pull request with any improvements or fixes. Ensure you follow the coding style and provide meaningful commit messages.
 
 ---
 
 **Niti: Empowering Embedded Development with Rust 🚀**
 
 For more detailed documentation and updates, visit the [GitHub repository](https://github.com/cyberkutti-iedc/Niti-Extension).
+
+---
+
+### Enjoy your embedded development with Rust and the Niti extension! 🚀
